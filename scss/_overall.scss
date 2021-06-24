@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  font-family: $font-main;
+	font-size: $font-size-main + px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: $color-main;
+}
+
+body._lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.container {
+	max-width: $maxWidthContainer + px;
+	@include adaptive-value ("padding-left", 15, 12, 1);
+	@include adaptive-value ("padding-right", 15, 12, 1);
+	margin: 0 auto;
+}
+
+.section-title {
+	@include adaptive-value ("font-size", 36, 22, 1);
+	@include adaptive-value ("line-height", 43, 24, 1);
+	font-weight: 700;
+	text-align: center;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}

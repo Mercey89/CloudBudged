@@ -1,0 +1,107 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	scroll-behavior: auto;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: none;
+	white-space: nowrap;
+	// -webkit-tap-highlight-color: transparent;
+}
+
+button {
+	cursor: pointer;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: inherit;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+iframe,
+img,
+input,
+select,
+textarea {
+	height: auto;
+	max-width: 100%;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	text-transform: none;
+	word-wrap: normal;
+}

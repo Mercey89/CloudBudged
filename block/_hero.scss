@@ -1,0 +1,71 @@
+.hero {
+	width: 100%;
+	height: 100vh;
+	color: $color-white;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(90deg,
+	rgba(213, 32, 71, 0.8) 0%,
+	rgba(238, 61, 27, 0.8) 100%);
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		background-image: url(/images/hero-bg.jpg);
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-size: cover;
+		z-index: -1;
+	}
+}
+
+.hero__container {
+	padding-top: $maxHeader + px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero__inner {
+	@include adaptive-value ("padding-top", 100, 50, 1);
+	@include adaptive-value ("padding-bottom", 100, 30, 1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero__title {
+	@include adaptive-value ("font-size", 72, 38, 1);
+	@include adaptive-value ("line-height", 86, 43, 1);
+	@include adaptive-value ("margin-bottom", 50, 25, 1);
+	text-transform: uppercase;
+}
+
+.hero__sub-title {
+	max-width: 520px;
+	font-weight: 400;
+	text-align: center;
+	@include adaptive-value ("font-size", 24, 18, 1);
+	@include adaptive-value ("line-height", 36, 20, 1);
+	@include adaptive-value ("margin-bottom", 50, 25, 1);
+}
+
+.hero__button {
+	padding: 15px 55px;
+	line-height: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $color-accent;
+	background-color: $color-white;
+	border-radius: $radius-min;
+	transition: color 0.2s, background-color 0.2s;
+	&:hover {
+		background-color: transparent;
+		color: $color-white;
+		box-shadow: inset 0 0 1px 1px rgba($color-white, .9);
+	}
+}
