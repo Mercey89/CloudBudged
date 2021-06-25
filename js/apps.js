@@ -31,12 +31,13 @@ $('.nav-header__item').click(function(){
 	$(this).siblings().removeClass('_current');
 })
 
-$('.scroll-js').on('click', function(event) {
-	if (this.hash !== '') {
-		event.preventDefault();
-		var hash = this.hash;
-	}
+$(document).ready(function() {
+  var headerHeight = $('.header__inner').outerHeight();
+  $('.scroll-js').click(function(e) {
+  	var targetHref = $(this).attr('href');
 	$('html, body').animate({
-			scrollTop: $(hash).offset().top - 70
-	}, 400);
+		scrollTop: $(targetHref).offset().top - headerHeight + 30
+	}, 450);
+    e.preventDefault();
+  });
 });
