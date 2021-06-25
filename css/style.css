@@ -878,19 +878,85 @@ select {
 }
 
 .technology__title {
-  margin-bottom: 65px;
+  margin-bottom: 95px;
 }
 
 @media (max-width: 1130px) {
   .technology__title {
-    margin-bottom: calc(25px + 40 * ((100vw - 320px)/ 810));
+    margin-bottom: calc(55px + 40 * ((100vw - 320px)/ 810));
+  }
+}
+
+.technology__list {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  counter-reset: tech-icons;
+}
+
+@media (max-width: 1130px) {
+  .technology__list {
+    grid-gap: calc(10px + 10 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 750px) {
+  .technology__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 750px) and (max-width: 1130px) {
+  .technology__list {
+    row-gap: calc(30px + 10 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 450px) {
+  .technology__list {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 450px) and (max-width: 1130px) {
+  .technology__list {
+    row-gap: calc(30px + 10 * ((100vw - 320px)/ 810));
   }
 }
 
 .technology__item {
   display: flex;
   align-items: center;
+  text-align: center;
   flex-direction: column;
+  position: relative;
+}
+
+.technology__item::before {
+  content: "0" counter(tech-icons);
+  counter-increment: tech-icons;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+  font-size: 100px;
+  font-weight: 700;
+  z-index: -1;
+}
+
+@media (max-width: 1130px) {
+  .technology__item::before {
+    font-size: calc(55px + 45 * ((100vw - 320px)/ 810));
+  }
+}
+
+.technology__icon {
+  display: flex;
+  height: 70px;
+  margin-bottom: 10px;
 }
 
 .technology__item-title {
@@ -904,24 +970,26 @@ select {
   }
 }
 
-.technology__icon {
-  position: relative;
-}
-
-.technology__icon::before {
-  content: "01";
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #f2f2f2;
-  font-size: 100px;
-  font-weight: 700;
+.technology__sub-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 @media (max-width: 1130px) {
-  .technology__icon::before {
-    font-size: calc(30px + 70 * ((100vw - 320px)/ 810));
+  .technology__sub-title {
+    margin-bottom: calc(5px + 5 * ((100vw - 320px)/ 810));
   }
+}
+
+@media (max-width: 1130px) {
+  .technology__sub-title {
+    font-size: calc(16px + 2 * ((100vw - 320px)/ 810));
+  }
+}
+
+.technology__paragraph {
+  max-width: 240px;
 }
 
 .footer {
