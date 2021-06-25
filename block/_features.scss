@@ -29,6 +29,7 @@
 		flex-direction: row;
 	}
 	@media (max-width: 425px) {
+		max-height: 350px;
 		flex-direction: column;
 	}
 }
@@ -54,6 +55,7 @@
 .card-features__info {
 	width: 80%;
 	padding: 25px;
+	flex: 1 0 auto;
 	text-align: center;
 	background-color: $color-white;
 	border-radius: $radius-small;
@@ -62,12 +64,14 @@
 	@media (max-width: 820px) {
 		height: 100%;
 		width: 100%;
+		flex: auto;
 		text-align: unset;
 		box-shadow: 1px 1px 0 0 rgba(0,0,0,0.05);
 		border-radius: 0 $radius-small $radius-small 0;
 		margin-top: 0;
 	}
 	@media (max-width: 425px) {
+		height: auto;
 		border-radius: 0 0 $radius-small $radius-small;
 	}
 }

@@ -50,7 +50,7 @@
 	font-weight: 400;
 	text-align: center;
 	@include adaptive-value ("font-size", 24, 18, 1);
-	@include adaptive-value ("line-height", 36, 20, 1);
+	@include adaptive-value ("line-height", 36, 28, 1);
 	@include adaptive-value ("margin-bottom", 50, 25, 1);
 }
 

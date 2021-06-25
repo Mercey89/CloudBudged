@@ -552,7 +552,7 @@ select {
 
 @media (max-width: 1130px) {
   .hero__sub-title {
-    line-height: calc(20px + 16 * ((100vw - 320px)/ 810));
+    line-height: calc(28px + 8 * ((100vw - 320px)/ 810));
   }
 }
 
@@ -784,6 +784,7 @@ select {
 
 @media (max-width: 425px) {
   .features__item {
+    max-height: 350px;
     flex-direction: column;
   }
 }
@@ -816,6 +817,7 @@ select {
 .card-features__info {
   width: 80%;
   padding: 25px;
+  flex: 1 0 auto;
   text-align: center;
   background-color: white;
   border-radius: 8px;
@@ -827,6 +829,7 @@ select {
   .card-features__info {
     height: 100%;
     width: 100%;
+    flex: auto;
     text-align: unset;
     box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.05);
     border-radius: 0 8px 8px 0;
@@ -836,6 +839,7 @@ select {
 
 @media (max-width: 425px) {
   .card-features__info {
+    height: auto;
     border-radius: 0 0 8px 8px;
   }
 }
@@ -1030,6 +1034,12 @@ select {
   }
 }
 
+@media (max-width: 450px) {
+  .footer__main {
+    grid-template-columns: 1fr;
+  }
+}
+
 .footer__title {
   font-size: 18px;
   font-weight: 700;
@@ -1068,6 +1078,12 @@ select {
 @media (max-width: 1130px) {
   .footer__copyright {
     padding-top: calc(20px + 60 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 750px) {
+  .footer__copyright {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

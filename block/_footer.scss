@@ -13,6 +13,9 @@
 		text-align: center;
 		grid-template-columns: repeat(2, 1fr);
 	}
+	@media (max-width: 450px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .footer__title {
@@ -43,4 +46,7 @@
 .footer__copyright {
 	color: $color-gray;
 	@include adaptive-value ("padding-top", 80, 20, 1);
+	@media (max-width: 750px) {
+		text-align: center;
+	}
 }
