@@ -189,7 +189,7 @@ select {
 }
 
 .header._scroll .header__wrapper {
-  background-color: rgba(237, 76, 92, 0.9);
+  background-color: rgba(233, 27, 43, 0.9);
   transition: background-color .2s;
 }
 
@@ -405,7 +405,7 @@ select {
 }
 
 .header__login:hover {
-  color: #ed4c5c;
+  color: #e91b2b;
   background-color: white;
 }
 
@@ -567,7 +567,7 @@ select {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #ed4c5c;
+  color: #e91b2b;
   background-color: white;
   border-radius: 3px;
   transition: color 0.2s, background-color 0.2s;
@@ -664,7 +664,7 @@ select {
 .overview__more {
   display: inline-block;
   padding: 10px 0;
-  color: #ed4c5c;
+  color: #e91b2b;
   font-weight: 600;
 }
 
@@ -857,7 +857,7 @@ select {
 }
 
 .card-features__more {
-  color: #ed4c5c;
+  color: #e91b2b;
 }
 
 .card-features__more:hover {
@@ -1058,7 +1058,7 @@ select {
 }
 
 .footer__link:hover {
-  color: #ed4c5c;
+  color: #e91b2b;
   border-bottom: 1px solid;
 }
 
@@ -1071,7 +1071,7 @@ select {
 }
 
 .footer__copyright {
-  color: #999999;
+  color: #737373;
   padding-top: 80px;
 }
 

@@ -38,5 +38,5 @@ $('.scroll-js').on('click', function(event) {
 	}
 	$('html, body').animate({
 			scrollTop: $(hash).offset().top - 70
-	}, 500);
+	}, 400);
 });
