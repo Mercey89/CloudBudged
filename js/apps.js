@@ -16,6 +16,20 @@ $('.lang-header__list').click(function(){
 	$(this).toggleClass('_active');
 });
 
+$('.video-overview__button').click(function(){
+	$('.video-popup').addClass('_active');
+});
+
+$(document).mouseup(function (e) {
+	var container = $('.video-popup__inner');
+
+	if (!container.is(e.target)
+			&& container.has(e.target).length === 0)
+	{
+			$('.video-popup').removeClass('_active');
+	}
+});
+
 $('.header__burger').click(function(){
 	$('.header__burger, .nav-header__list').toggleClass('_active');
 	$('body').toggleClass('_lock');

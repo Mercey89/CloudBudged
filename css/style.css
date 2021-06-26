@@ -704,6 +704,33 @@ select {
   border-radius: 50%;
 }
 
+.video-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+.video-popup._active {
+  display: flex;
+}
+
+.video-popup__inner {
+  width: 888px;
+  height: 500px;
+}
+
+.video-popup__inner iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .features {
   background-color: #fafafa;
 }
