@@ -186,6 +186,8 @@ select {
   color: white;
   line-height: 20px;
   text-transform: uppercase;
+  position: absolute;
+  min-height: 70px;
 }
 
 .header._scroll .header__wrapper {
@@ -306,34 +308,22 @@ select {
 
 .nav-header__item {
   position: relative;
-  transition: text-shadow .5s;
 }
 
 .nav-header__item::before {
   content: "";
   position: absolute;
+  bottom: 0;
+  left: 50%;
   width: 0;
   height: 2px;
-  left: 50%;
-  bottom: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  transition: all .3s;
-  opacity: 0;
-}
-
-.nav-header__item:hover, .nav-header__item._current {
-  text-shadow: 0 0 0 white;
+  background-color: #fff;
+  transform: translate(-50%, 0);
+  transition: width 0.2s;
 }
 
 .nav-header__item:hover::before, .nav-header__item._current::before {
   width: 100%;
-  bottom: 100%;
-  opacity: 1;
-}
-
-.nav-header__item._current::before {
-  bottom: 0;
 }
 
 .nav-header__link {
