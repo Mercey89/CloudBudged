@@ -16,6 +16,11 @@ $('.lang-header__list').click(function(){
 	$(this).toggleClass('_active');
 });
 
+$('.lang-header__item').click(function(){
+	$(this).addClass('_current');
+	$(this).siblings().removeClass('_current');
+});
+
 $('.video-overview__button').click(function(){
 	$('.video-popup').addClass('_active');
 });
