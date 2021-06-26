@@ -1093,6 +1093,67 @@ select {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.focused__slider {
+  position: relative;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+@media (max-width: 1130px) {
+  .focused__slider {
+    padding-top: calc(10px + 85 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 1130px) {
+  .focused__slider {
+    padding-bottom: calc(10px + 85 * ((100vw - 320px)/ 810));
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.slider__item {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all ease 0.7s;
+  cursor: pointer;
+  z-index: 1;
+  left: 0;
+  opacity: 0.7;
+  transform: scale(0.8);
+  right: 0;
+  margin: 0 auto;
+}
+
+.slider__item.active {
+  z-index: 2;
+  opacity: 1;
+  background: #fff;
+  transform: scale(1);
+}
+
+@media (max-width: 450px) {
+  .slider__item {
+    height: 75%;
+  }
+}
+
+.slider-focused__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .contact__inner {
   display: flex;
   justify-content: space-between;
@@ -1221,6 +1282,13 @@ select {
   color: #ababab;
   grid-column: span 2;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.2549 0.192383L13.8701 0.807617L7 7.67773L0.129883 0.807617L0.745117 0.192383L7 6.44727L13.2549 0.192383Z' fill='%23132743' fill-opacity='0.5'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+option.form__option {
+  padding: 10px;
 }
 
 .form__button {
