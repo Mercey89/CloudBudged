@@ -1,0 +1,55 @@
+.focused {
+	color: $color-white;
+	background-color: $color-accent;
+}
+
+.focused__inner {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 750px) {
+		flex-direction: column;
+	}
+}
+
+.focused__item {
+	flex: 1 0 50%;
+	@include adaptive-value ("padding-top", 95, 40, 1);
+	@include adaptive-value ("padding-bottom", 95, 40, 1);
+	&:first-child {
+		@include adaptive-value ("padding-right", 90, 35, 1);
+		@media (max-width: 750px) {
+			padding-right: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+.focused__title {
+	@include adaptive-value ("font-size", 36, 20, 1);
+	@include adaptive-value ("line-height", 43, 22, 1);
+	@include adaptive-value ("margin-bottom", 35, 15, 1);
+}
+
+.focused__paragraph {
+	font-weight: 600;
+	text-align: justify;
+	@include adaptive-value ("margin-bottom", 35, 15, 1);
+}
+
+.apps-focused {
+	display: flex;
+	margin-left: -10px;
+}
+
+.apps-focused__link {
+	display: inline-block;
+	border-radius: 50%;
+	padding: 10px;
+	transition: background-color .3s;
+	&:not(:last-child) {
+		margin-right: 20px;
+	}
+	&:hover {
+		background-color: rgba($color-white, 0.2);
+	}
+}

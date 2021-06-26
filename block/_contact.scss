@@ -1,0 +1,93 @@
+.contact__inner {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 810px) {
+		flex-direction: column;
+	}
+}
+
+.contact__item {
+	flex: 1 0 50%;
+	@include adaptive-value ("padding-top", 95, 10, 1);
+	@include adaptive-value ("padding-bottom", 95, 20, 1);
+	&:nth-child(1) {
+		@include adaptive-value ("padding-right", 90, 35, 1);
+		@media (max-width: 810px) {
+			padding-right: 0;
+			padding-bottom: 0;
+		}
+	}
+	&:nth-child(2) {
+		@media (max-width: 810px) {
+			@include adaptive-value ("padding-top", 35, 20, 1);
+		}
+	}
+}
+
+.contact__title {
+	@include adaptive-value ("font-size", 36, 20, 1);
+	@include adaptive-value ("line-height", 43, 22, 1);
+	@include adaptive-value ("margin-bottom", 35, 15, 1);
+}
+
+.contact__paragraph {
+	font-weight: 600;
+	text-align: justify;
+}
+
+.form {
+	display: grid;
+	line-height: 20px;
+	@include adaptive-value ("grid-gap", 24, 10, 1);
+	grid-template-columns: repeat(2, 1fr);
+	& > * {
+		border-radius: $radius-min;
+		padding: 20px 15px;
+		border: 0;
+	}
+}
+
+.form__input {
+	box-shadow: inset 0 0 0 1px rgba($color-main, .2);
+	&:nth-child(3) {
+		grid-column: span 2;
+	}
+	&::placeholder {
+		color: #ababab;
+	}
+	@media (max-width: 450px) {
+		&:nth-child(1),
+		&:nth-child(2) {
+			grid-column: span 2;
+		}
+	}
+}
+
+.form__select {
+	color: #ababab;
+	grid-column: span 2;
+	box-shadow: inset 0 0 0 1px rgba($color-main, .2);
+
+}
+
+.form__button {
+	padding: 10px 15px;
+	display: flex;
+	justify-self: flex-start;
+	color: $color-white;
+	background-color: $color-accent;
+	transition: color 0.2s,
+							background-color 0.2s,
+							box-shadow 0.2s;
+	&:hover {
+		color: $color-accent;
+		background-color: transparent;
+		box-shadow: inset 0 0 0 1px $color-accent;
+	}
+	@media (max-width: 450px) {
+		padding: 15px;
+		display: block;
+		justify-self: unset;
+		grid-column: span 2;
+	}
+}

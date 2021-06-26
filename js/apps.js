@@ -29,7 +29,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('body,html').animate({
 			scrollTop: $(this.hash).offset().top - headerHeight
-		},500)
+		},500) // speed
 	});
 	// Link switching
 	$(window).scroll(function(){
@@ -40,10 +40,9 @@ $(document).ready(function() {
 			if (sectionOffset <= scrollbarLocation) {
 				$(this).parent().addClass('_current');
 				$(this).parent().siblings().removeClass('_current');
-			} else {
-				if (sectionOffset >= scrollbarLocation) {
-					$(this).parent().removeClass('_current');
-				}
+			}
+			if (sectionOffset >= scrollbarLocation) {
+				$(this).parent().removeClass('_current');
 			}
 		})
 	})

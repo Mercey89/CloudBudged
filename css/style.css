@@ -191,7 +191,7 @@ select {
 }
 
 .header._scroll .header__wrapper {
-  background-color: rgba(233, 27, 43, 0.9);
+  background-color: rgba(237, 76, 92, 0.9);
   transition: background-color .2s;
 }
 
@@ -315,15 +315,15 @@ select {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 0;
+  width: 100%;
   height: 2px;
   background-color: #fff;
-  transform: translate(-50%, 0);
-  transition: width 0.2s;
+  transform: translate(-50%, 0) scale(0);
+  transition: transform 0.3s;
 }
 
 .nav-header__item:hover::before, .nav-header__item._current::before {
-  width: 100%;
+  transform: translate(-50%, 0) scale(1);
 }
 
 .nav-header__link {
@@ -395,7 +395,7 @@ select {
 }
 
 .header__login:hover {
-  color: #e91b2b;
+  color: #ed4c5c;
   background-color: white;
 }
 
@@ -557,7 +557,7 @@ select {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #e91b2b;
+  color: #ed4c5c;
   background-color: white;
   border-radius: 3px;
   transition: color 0.2s, background-color 0.2s;
@@ -654,7 +654,7 @@ select {
 .overview__more {
   display: inline-block;
   padding: 10px 0;
-  color: #e91b2b;
+  color: #ed4c5c;
   font-weight: 600;
 }
 
@@ -847,7 +847,7 @@ select {
 }
 
 .card-features__more {
-  color: #e91b2b;
+  color: #ed4c5c;
 }
 
 .card-features__more:hover {
@@ -986,6 +986,267 @@ select {
   max-width: 240px;
 }
 
+.focused {
+  color: white;
+  background-color: #ed4c5c;
+}
+
+.focused__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+  .focused__inner {
+    flex-direction: column;
+  }
+}
+
+.focused__item {
+  flex: 1 0 50%;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+@media (max-width: 1130px) {
+  .focused__item {
+    padding-top: calc(40px + 55 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 1130px) {
+  .focused__item {
+    padding-bottom: calc(40px + 55 * ((100vw - 320px)/ 810));
+  }
+}
+
+.focused__item:first-child {
+  padding-right: 90px;
+}
+
+@media (max-width: 1130px) {
+  .focused__item:first-child {
+    padding-right: calc(35px + 55 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 750px) {
+  .focused__item:first-child {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+.focused__title {
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 1130px) {
+  .focused__title {
+    font-size: calc(20px + 16 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 1130px) {
+  .focused__title {
+    line-height: calc(22px + 21 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 1130px) {
+  .focused__title {
+    margin-bottom: calc(15px + 20 * ((100vw - 320px)/ 810));
+  }
+}
+
+.focused__paragraph {
+  font-weight: 600;
+  text-align: justify;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 1130px) {
+  .focused__paragraph {
+    margin-bottom: calc(15px + 20 * ((100vw - 320px)/ 810));
+  }
+}
+
+.apps-focused {
+  display: flex;
+  margin-left: -10px;
+}
+
+.apps-focused__link {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color .3s;
+}
+
+.apps-focused__link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.apps-focused__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 810px) {
+  .contact__inner {
+    flex-direction: column;
+  }
+}
+
+.contact__item {
+  flex: 1 0 50%;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+@media (max-width: 1130px) {
+  .contact__item {
+    padding-top: calc(10px + 85 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 1130px) {
+  .contact__item {
+    padding-bottom: calc(20px + 75 * ((100vw - 320px)/ 810));
+  }
+}
+
+.contact__item:nth-child(1) {
+  padding-right: 90px;
+}
+
+@media (max-width: 1130px) {
+  .contact__item:nth-child(1) {
+    padding-right: calc(35px + 55 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 810px) {
+  .contact__item:nth-child(1) {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 810px) {
+  .contact__item:nth-child(2) {
+    padding-top: 35px;
+  }
+}
+
+@media (max-width: 810px) and (max-width: 1130px) {
+  .contact__item:nth-child(2) {
+    padding-top: calc(20px + 15 * ((100vw - 320px)/ 810));
+  }
+}
+
+.contact__title {
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 1130px) {
+  .contact__title {
+    font-size: calc(20px + 16 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 1130px) {
+  .contact__title {
+    line-height: calc(22px + 21 * ((100vw - 320px)/ 810));
+  }
+}
+
+@media (max-width: 1130px) {
+  .contact__title {
+    margin-bottom: calc(15px + 20 * ((100vw - 320px)/ 810));
+  }
+}
+
+.contact__paragraph {
+  font-weight: 600;
+  text-align: justify;
+}
+
+.form {
+  display: grid;
+  line-height: 20px;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1130px) {
+  .form {
+    grid-gap: calc(10px + 14 * ((100vw - 320px)/ 810));
+  }
+}
+
+.form > * {
+  border-radius: 3px;
+  padding: 20px 15px;
+  border: 0;
+}
+
+.form__input {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.form__input:nth-child(3) {
+  grid-column: span 2;
+}
+
+.form__input::placeholder {
+  color: #ababab;
+}
+
+@media (max-width: 450px) {
+  .form__input:nth-child(1), .form__input:nth-child(2) {
+    grid-column: span 2;
+  }
+}
+
+.form__select {
+  color: #ababab;
+  grid-column: span 2;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.form__button {
+  padding: 10px 15px;
+  display: flex;
+  justify-self: flex-start;
+  color: white;
+  background-color: #ed4c5c;
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.form__button:hover {
+  color: #ed4c5c;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #ed4c5c;
+}
+
+@media (max-width: 450px) {
+  .form__button {
+    padding: 15px;
+    display: block;
+    justify-self: unset;
+    grid-column: span 2;
+  }
+}
+
 .footer {
   background-color: #fafafa;
   padding-top: 85px;
@@ -1048,7 +1309,7 @@ select {
 }
 
 .footer__link:hover {
-  color: #e91b2b;
+  color: #ed4c5c;
   border-bottom: 1px solid;
 }
 
