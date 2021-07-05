@@ -25,6 +25,13 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	transform: translateY(20%);
+	opacity: 0;
+	transition: transform .9s, opacity 1.5s;
+	&._animated {
+		transform: translateY(0%);
+		opacity: 1;
+	}
 	@media (max-width: 820px) {
 		flex-direction: row;
 	}

@@ -28,6 +28,9 @@
 	text-align: center;
 	flex-direction: column;
 	position: relative;
+	transition: transform .3s, opacity .4;
+	transform: scale(0);
+	opacity: 0;
 	&::before {
 		content: "0" counter(tech-icons);
 		counter-increment: tech-icons;
@@ -38,6 +41,22 @@
 		@include adaptive-value ("font-size", 100, 55, 1);
 		font-weight: 700;
 		z-index: -1;
+	}
+	&:nth-child(1) {
+		transition: transform .3s, opacity .4s;
+	}
+	&:nth-child(2) {
+		transition: transform .4s, opacity .5s;
+	}
+	&:nth-child(3) {
+		transition: transform .5s, opacity .6s;
+	}
+	&:nth-child(4) {
+		transition: transform .6s, opacity .7s;
+	}
+	&._animated {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
 

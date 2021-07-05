@@ -10,12 +10,24 @@
 	flex: 1 0 50%;
 	@include adaptive-value ("padding-top", 95, 40, 1);
 	@include adaptive-value ("padding-bottom", 95, 40, 1);
+	transition: transform .9s, opacity 0.5s;
+	opacity: 0;
 	&:first-child {
 		@include adaptive-value ("padding-right", 90, 35, 1);
 		@media (max-width: 750px) {
 			padding-right: 0;
 			padding-bottom: 0;
 		}
+	}
+	&:nth-child(1) {
+		transform: translateX(-100%);
+	}
+	&:nth-child(2) {
+		transform: translateX(100%);
+	}
+	&._animated {
+		opacity: 1;
+		transform: translateY(0%);
 	}
 }
 
