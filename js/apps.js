@@ -22,16 +22,18 @@ $('.lang-header__item').click(function(){
 });
 
 $('.video-overview__button').click(function(){
-	$('.video-popup').addClass('_active');
+	$('.overview-popup').addClass('_active');
+	$('body').addClass('_lock');
 });
 
 $(document).mouseup(function (e) {
-	var container = $('.video-popup__inner');
+	var container = $('.overview-popup__video');
 
 	if (!container.is(e.target)
 			&& container.has(e.target).length === 0)
 	{
-			$('.video-popup').removeClass('_active');
+			$('.overview-popup').removeClass('_active');
+			$('body').toggleClass('_lock');
 	}
 });
 

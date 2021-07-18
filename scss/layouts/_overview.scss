@@ -83,26 +83,23 @@
 	}
 }
 
-.video-popup {
+
+.overview-popup {
 	position: fixed;
-	width: 100%; height: 100%;
 	top: 0; left: 0;
+	width: 100%; height: 100%;
+	z-index: 100;
+	background-color: rgba(0,0,0,0.5);
 	display: none;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba($color-main, 0.3);
-	z-index: 99;
 	&._active {
-		display: flex;
+			display: flex;
 	}
 }
 
-.video-popup__inner {
-	width: 70%;
-	height: 500px;
- & iframe{
-		width:100%;
-		height: 100%;
-	}
+video {
+	width: 90%;
+	max-width: 800px;
+	z-index: 150;
 }
-
