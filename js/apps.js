@@ -23,7 +23,6 @@ $('.lang-header__item').click(function(){
 
 $('.video-overview__button').click(function(){
 	$('.overview-popup').addClass('_active');
-	$('body').addClass('_lock');
 });
 
 $(document).mouseup(function (e) {
@@ -33,7 +32,6 @@ $(document).mouseup(function (e) {
 			&& container.has(e.target).length === 0)
 	{
 			$('.overview-popup').removeClass('_active');
-			$('body').toggleClass('_lock');
 	}
 });
 
